@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}
+Title
+{% endblock %}
+
+{% block content %}
+<br><br><br>
+    <article>
+            {% if user.is_authenticated %}
+                <h1><b>{{ detail.product_name }}</b></h1><a href="{% url 'product_content_edit' pk=detail.pk %}">edit.</a>
+            {% else %}
+                <h1><b>{{ detail.product_name }}</b></h1>
+            {% endif %}
+            <br>
+                    {% if detail.product_image %}
+                    <div class="img">
+                        <img src="{{ detail.product_image.url }}" width=500 height=100%>
+                    </div>
+                    {% else %}
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'product_content_edit' pk=detail.pk %}">Add image of your product.</a>
+                        {% endif %}
+                    {% endif %}
+            <br><br>
+                <h4><i>{{ detail.product_description }}</i></h4>
+    </article>
+    <br>
+    <article>
+        <h2>comments...
+            <small><a href="{% url 'add_productcomments' pk=detail.pk %}">add one</a></small>
+        </h2>
+    </article>
+
+        {% for comment in detail.productcomments.all %}
+            <div class="comment">
+                <strong>{{ comment.name }} commented on {{ comment.date_added }}</strong>
+                    <h4>comment:</h4>
+                        <p>
+                            {{ comment.body }}
+                        </p>
+            </div>
+            <br>
+        {% endfor %}
+
+{% endblock %}

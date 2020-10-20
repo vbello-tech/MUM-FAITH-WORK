@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    justify-items: space-between;
+    float: left;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+    background-color: rgb(58, 57, 57);
+    height: 90px;
+    align-items: center;
+    text-align: center;
+    z-index: 99;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+.navbar {
+    display: inline-block;
+    padding-right: 40px;
+}
+.navbar, li {
+    list-style: none;
+    display: inline;
+    padding-right: 5px;
+    text-align: center;
+    font-size: 30px;
+}
+.navbar, li, a {
+    color: wheat;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 0.3s ease 0s;
+}
+.navbar, li, a:hover {
+    color: rgb(196, 192, 192);
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+.logo {
+    text-align: center;
+    font-size: 40px;
+    color: whitesmoke;
+}
+article {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: wheat;
+    padding: 60px;
+    box-sizing: border-box;
+}
+section {
+    height: 400px;
+    width: 100%;
+    background-color: wheat;
+    margin: auto;
+    font-size: 1.8em;
+    font-weight: 900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.comment {
+    margin: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1%;
+    font-weight: 400;
+    background-color: wheat;
+}
+.comment, p {
+    padding-left: 3%;
+    padding-right: 5%;
+}
+.welcome {
+    background: transparent;
+    height: 200px;
+    text-align: center;
+    padding: 100px;
+    font-size: 5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#space {
+    height: 50px;
+}
+#dspace {
+    height: 250px;
+}
+.note {
+    font-size: 20px;
+    padding: 5%;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.well {
+    height: 100vh;
+    width: 100%;
+}
+footer {
+    background: rgb(82, 82, 82);
+    color: rgb(185, 184, 184);
+    text-decoration: none;
+    overflow: hidden;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    float: center;
+    font-size: 15px;
+}
+.foot {
+    background: rgb(82, 82, 82);
+    color: rgb(185, 184, 184);
+    font-size: 12px;
+}
+form {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    margin-bottom: 10%;
+    font-weight: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: teal;
+    padding: 50px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.img {
+    align-items: center;
+}
+.idis {
+    display: flex;
+}
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+.bg-text, h1 {
+    font-size: 1em;
+    font-weight: 900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.bg-text, p {
+    font-size: larger;
+    font-weight: 900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.bg-image {
+  background: url(../images/2.jpg);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

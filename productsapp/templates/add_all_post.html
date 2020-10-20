@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+Title
+{% endblock %}
+
+{% block content %}
+<br><br><br>
+    <div class="comment">
+         {% if user.is_authenticated %}
+               ADD BLOG POST <a href="{% url 'add_post' %}">HERE</a>
+                <br>
+                ADD NEW PRODUCT <a href="{% url 'add_product' %}">HERE</a>
+                {% else %}
+                <h1>YOU ARE NOT AUTHORIZED TO ADD POST.<a href="{% url 'homepage' %}">HOMEPAGE</a></h1>
+         {% endif %}
+    </div>
+{% endblock %}

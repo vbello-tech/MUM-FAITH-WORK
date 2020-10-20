@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Title
+{% endblock %}
+
+{% block content %}
+<br>
+        <div class="well">
+            <div class="bg-image"></div>
+
+            <div class="bg-text">
+              <h1>WELCOME</h1>
+              <p>
+                  WELCOME TO MY WEBSITE WHERE I SHOWCASE MY COLLECTIONS OF CLOTHES AND SHOES AVAILABLE FOR YOU.
+                  THERE IS ALSO A BLOG SECTION WHERE YOU GET TO COMMENT ON ANY MARRAIGE RELATED STORIES OR QUESTIONS I HAVE FOR YOU.
+              </p>
+            </div>
+        </div>
+            <div id="space"></div>
+        <div id="dspace"></div>
+        <section>
+            <div id="space"></div>
+            <div class="note">
+                I am a marriage counsellor who love to help couples to prevent divorce and i love to always ask questions from my
+                clients so i decided to add a blog section to this website where you can give your comments on what ever marriage problem i bring your way
+                on a weekly bases. You can <a href="{% url 'post_list' %}">VIEW MY BLOG</a> to see some of my post and i would be very happy and deligthed if you add your comments to
+                help couples who are in trouble.
+            </div>
+            <div id="space"></div>
+        </section>
+        <div id="dspace"></div>
+        <section>
+            <div class="note">
+                <div class="idis">
+                    <div class="container">
+                          <div class="row">
+                            <div class="col-sm">
+                              <img src="{% static 'images/a.jpg' %}" controls width="auto" height="300px"></img>
+                            </div>
+                            <div class="col-sm">
+                              <img src="{% static 'images/B.jpg' %}" controls width="auto" height="300px"></img>
+                            </div>
+                            <div class="col-sm">
+                              <img src="{% static 'images/C.jpg' %}" controls width="auto" height="300px"></img>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                 <p class="text-right"><a href="{% url 'product_list' %}">VIEW COLLECTIONS</a></p>
+            </div>
+        </section>
+        <div id="dspace"></div>
+        <section>
+            <div id="space"></div>
+            <div class="note">
+                I also organise a weekly sunday show live on facebook with pure Ekiti Dialect where there is
+                a giveaway price for people who successfully answers my question using ekiti dialect. You can also contact me for your advertisement, M.C for your ceremonies
+                and lot more.
+            </div>
+        </section>
+        <div id="space"></div>
+{% endblock %}
+
+

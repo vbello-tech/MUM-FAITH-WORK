@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+Title
+{% endblock %}
+
+{% block content %}
+<br><br><br>
+    {% for post in posts %}
+    <article>
+           <div class="media">
+               {% if post.post_image %}
+                    <img class="align-self-start mr-3" src="{{ post.post_image.url }}" alt="Generic placeholder image" width="100" height="100">
+               {% endif %}
+                <div class="media-body">
+                    <h1 class="mt-0">{{ post.title }}</h1>
+                    <h6>by: {{ post.author }}  published: {{ post.publish_date }}</h6>
+                    {% if post.post_description %}
+                        <h5><i>{{ post.post_description }}</i></h5><small><a href="{% url 'post_content' pk=post.pk %}" class="float-right">continue reading</a></small>
+                    {% endif %}
+                </div>
+           </div>
+    </article>
+        <br>
+    {% endfor %}
+    <br>
+
+{% endblock %}
+
+

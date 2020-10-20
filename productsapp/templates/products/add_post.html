@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+Title
+{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+    <h1>CREATE NEW BLOG POST.</h1>
+        <form method="POST" enctype="multipart/form-data" class="form">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <p class="text-right"><button type="submit" class="btn btn-primary">POST.</button></p>
+            <input type="hidden" name="next" value="{% url 'post_list' %}"/>
+        </form>
+    {% else %}
+    <h1>YOU ARE NOT AUTHORIZED.<a href="{% url 'homepage' %}">HOMEPAGE</a></h1>
+    {% endif %}
+{% endblock %}

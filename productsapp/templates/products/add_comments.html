@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+Title
+{% endblock %}
+
+{% block content %}
+    <h1>COMMENT...</h1>
+    <form method="POST" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p class="text-right"><button type="submit" class="btn btn-primary">COMMENT.</button></p>
+        <input type="hidden" name="next" value="{% url 'post_content' pk=detail.pk %}"/>
+    </form>
+{% endblock %}

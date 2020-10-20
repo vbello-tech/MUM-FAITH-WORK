@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}
+Title
+{% endblock %}
+
+{% block content %}
+<br><br><br>
+    <article>
+            {% if user.is_authenticated %}
+                <h1><b>{{ detail.title }}</b></h1><a href="{% url 'post_content_edit' pk=detail.pk %}">edit.</a>
+            {% else %}
+                <h1><b>{{ detail.title }}</b></h1>
+            {% endif %}
+                <small class="text-muted"><h6>BY: {{ detail.author }}.         PUBLISHED:{{ detail.publish_date }}</h6></small>
+            {% if detail.post_image %}
+                <img src="{{ detail.post_image.url }}" width="650" height=100%>
+            {% endif %}
+                <p>
+                    {{ detail.body|linebreaksbr }}
+                </p>
+            <hr>
+    </article>
+<br>
+    <article>
+        <h2>comments...
+            <a href="{% url 'add_comments' pk=detail.pk%}">add one</a>
+        </h2>
+    </article>
+    {% for comment in detail.comments.all %}
+        <div class="comment">
+            <strong>{{ comment.name }} commented on {{ comment.date_added }}</strong>
+                <h4>comment:</h4>
+                    <p>
+                        {{ comment.body }}
+                    </p>
+        </div>
+        <br>
+    {% endfor %}
+
+`{% endblock %}
+
+
+

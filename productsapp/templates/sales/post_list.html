@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Title
+{% endblock %}
+
+{% block content %}
+<br><br><br>
+<hr>
+
+    {% for post in posts %}
+    <article>
+        <div>
+                <h1>{{ post.product_name }}</h1>
+            <br>
+                <div id="content">
+                    {% if post.product_image %}
+                            <div class="float-center"><img src="{{ post.product_image.url }}" alt="..." class="img-fluid" width="500" height=300></div>
+
+                            {% else %}
+                                {% if user.is_authenticated %}
+                                    <a href="{% url 'product_content_edit' pk=post.pk %}">Add image of your product.</a>
+                                {% endif %}
+                        {% endif %}
+                </div>
+                <div class="float-right"><small class="text-muted"><a href="{% url 'product_content' pk=post.pk %}">view product</a></small></div><br>
+            <hr>
+        </div>
+    </article>
+        <br>
+    {% endfor %}
+
+{% endblock %}
+
+
