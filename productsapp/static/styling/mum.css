@@ -171,8 +171,8 @@ form {
 }
 .bg-image {
   background: url(../images/2.jpg);
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;

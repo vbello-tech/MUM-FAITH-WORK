@@ -14,7 +14,9 @@
                     <li><a href="{% url 'homepage' %}">HOME</a></li>
                     <li><a href="{% url 'product_list' %}">COLLECTIONS</a></li>
                     <li><a href="{% url 'post_list' %}">BLOG</a></li>
+                    {% if user.is_authenticated %}
                     <li><a href="{% url 'add_all_post' %}">ADD</a></li>
+                    {% endif %}
                     <li><a href="{% url 'about' %}">ABOUT</a></li>
                 </ul>
             </nav>
@@ -26,7 +28,7 @@
         <footer>
             <div class="toof">
                 iyalekiti collections<br>
-                follow iyalekiti on <a href>facebook</a><br>
+                follow iyalekiti on <a href="https://web.facebook.com/oluwatoyin.oso/">facebook</a><br>
                 © 2020 vbellotech
             </div>
 
