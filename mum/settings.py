@@ -124,30 +124,22 @@ USE_TZ = True
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
+ Static files (CSS, JavaScript, Images)
+ https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-# STATIC_HOST = 'https://dg7675uxoej0m.cloudfront.net' if not DEBUG else ''
-# STATIC_URL = STATIC_HOST + '/static/'
+ STATIC_HOST = 'https://dg7675uxoej0m.cloudfront.net' if not DEBUG else ''
+ STATIC_URL = STATIC_HOST + '/static/'
 
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# STATICFILES_DIR = (
-#   os.path.join(BASE_DIR, 'static'),
-# )
+STATICFILES_DIR = (
+  os.path.join(BASE_DIR, 'static'),
+ )
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-AWS_ACCESS_KEY_ID = 'AKIAJ2CL4URLSSXNHP6A'
-AWS_SECRET_ACCESS_KEY = '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'
-
-AWS_STORAGE_BUCKET_NAME = 'iyalekitistatic'
-AWS_S3_CUSTOM_DOMAIN = 'd3v2oz7jiebzcm.cloudfront.net'
-
-AWS_LOCATION = 'static'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 
